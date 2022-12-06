@@ -35,25 +35,26 @@ return [
     ],
 
     'discord' => [
-        'prefix'    => '/',
+        'prefix' => '/',
         'not_found' => 'Command Not Found!',
-        'path'      => [
+        'path' => [
             'commands' => app_path('Discord/Commands'),
-            'directs'  => app_path('Discord/Directs'),
+            'directs' => app_path('Discord/Directs'),
         ],
-        'token'     => env('DISCORD_BOT_TOKEN'),
-        'channel'   => env('DISCORD_CHANNEL'),
-        'bot'       => env('DISCORD_BOT'),
+        'token' => env('DISCORD_BOT_TOKEN'),
+        'channel' => env('DISCORD_CHANNEL'),
+        'bot' => env('DISCORD_BOT'),
         'discord-php' => [
             'disabledEvents' => [
                 Event::TYPING_START,
             ],
-            'intents'        => array_sum(Intents::default()),
+            'intents' => array_sum(Intents::default()),
         ],
         'interactions' => [
             'path' => 'discord/webhook',
             'route' => 'discord.webhook',
-        ]
+            'middleware' => 'throttle',
+        ],
     ],
 
 ];
