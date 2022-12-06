@@ -45,9 +45,7 @@ class InteractionsListener
 
     protected function content(Request $request): string
     {
-        info($request->collect()->toJson());
-
-        return match ($request->json('name')) {
+        return match ($request->json('data.name')) {
             'test' => $this->test($request),
             'hello' => $this->hello($request),
             default => '<@'.$request->json('member.user.id').'> Hi!',
@@ -56,7 +54,7 @@ class InteractionsListener
 
     protected function test(Request $request): string
     {
-        $message = $request->collect('options')->firstWhere('name', 'message')['value'];
+        $message = $request->collect('data.options')->firstWhere('name', 'message')['value'];
 
         if (blank($message)) {
             $message = 'test';
@@ -67,7 +65,7 @@ class InteractionsListener
 
     protected function hello(Request $request): string
     {
-        $message = $request->collect('options')->firstWhere('name', 'message')['value'];
+        $message = $request->collect('data.options')->firstWhere('name', 'message')['value'];
 
         if (blank($message)) {
             $message = 'Hello';
