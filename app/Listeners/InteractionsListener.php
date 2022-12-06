@@ -28,18 +28,20 @@ class InteractionsListener
     public function handle(InteractionsWebhook $event)
     {
         //
-        $app_id = config('services.discord.bot');
-        $token = $event->request->json('token');
+        dispatch(function () use ($event) {
+            $app_id = config('services.discord.bot');
+            $token = $event->request->json('token');
 
-        info($app_id);
-        info($token);
+            info($app_id);
+            info($token);
 
-        $data = [
-            'content' => 'Hello! '.$event->request->json('member.user.username'),
-        ];
+            $data = [
+                'content' => 'Hello! '.$event->request->json('member.user.username'),
+            ];
 
-        $response = Http::discord()->post("/webhooks/$app_id/$token", $data);
+            $response = Http::discord()->post("/webhooks/$app_id/$token", $data);
 
-        info($response->json());
+            info($response->json());
+        })->afterResponse();
     }
 }
