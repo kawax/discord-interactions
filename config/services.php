@@ -43,7 +43,10 @@ return [
         ],
         'token' => env('DISCORD_BOT_TOKEN'),
         'channel' => env('DISCORD_CHANNEL'),
-        'bot' => env('DISCORD_BOT'),
+        //APPLICATION ID
+        'bot'       => env('DISCORD_BOT'),
+        //PUBLIC KEY
+        'public_key' => env('DISCORD_PUBLIC_KEY'),
         'discord-php' => [
             'disabledEvents' => [
                 Event::TYPING_START,
