@@ -33,6 +33,8 @@ class InteractionsListener
             $app_id = config('services.discord.bot');
             $token = $event->request->json('token');
 
+            info($event->request);
+
             $data = [
                 'content' => $this->content($event->request),
                 'allowed_mentions' => ['parse' => ['users']],
