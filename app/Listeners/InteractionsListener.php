@@ -45,7 +45,7 @@ class InteractionsListener
 
     protected function content(Request $request): string
     {
-        info($request->json('name'));
+        info($request->json());
 
         return match ($request->json('name')) {
             'test' => $this->test($request),
