@@ -38,9 +38,7 @@ class InteractionsListener
             'content' => 'Hello! '.$event->request->json('member.user.username'),
         ];
 
-        $response = Http::withHeaders([
-            'Authorization' => 'Bot '.config('services.discord.token'),
-        ])->post("https://discord.com/api/v10/webhooks/$app_id/$token", $data);
+        $response = Http::discord()->post("/webhooks/$app_id/$token", $data);
 
         info($response->json());
     }
