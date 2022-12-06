@@ -1,5 +1,8 @@
 <?php
 
+use Discord\WebSockets\Event;
+use Revolution\DiscordManager\Support\Intents;
+
 return [
 
     /*
@@ -29,6 +32,28 @@ return [
         'key' => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+    ],
+
+    'discord' => [
+        'prefix'    => '/',
+        'not_found' => 'Command Not Found!',
+        'path'      => [
+            'commands' => app_path('Discord/Commands'),
+            'directs'  => app_path('Discord/Directs'),
+        ],
+        'token'     => env('DISCORD_BOT_TOKEN'),
+        'channel'   => env('DISCORD_CHANNEL'),
+        'bot'       => env('DISCORD_BOT'),
+        'discord-php' => [
+            'disabledEvents' => [
+                Event::TYPING_START,
+            ],
+            'intents'        => array_sum(Intents::default()),
+        ],
+        'interactions' => [
+            'path' => 'discord/webhook',
+            'route' => 'discord.webhook',
+        ]
     ],
 
 ];
