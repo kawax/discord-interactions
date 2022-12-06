@@ -31,8 +31,11 @@ class InteractionsListener
         $app_id = config('services.discord.bot');
         $token = $event->request->json('token');
 
+        info($app_id);
+        info($token);
+
         $data = [
-            'content' => 'Hello! @'.$event->request->json('member.user.id'),
+            'content' => 'Hello! '.$event->request->json('member.user.username'),
         ];
 
         $response = Http::withHeaders([
