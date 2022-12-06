@@ -51,7 +51,7 @@ class InteractionsListener
         return match ($request->json('data.name')) {
             'test' => $this->test($request),
             'hello' => $this->hello($request),
-            default => '<@'.$request->json('member.user.id').'> Hi!',
+            default => '<@'.$request->json('member.user.id', $request->json('user.id')).'> Hi!',
         };
     }
 
@@ -61,7 +61,9 @@ class InteractionsListener
 
         $message = Arr::get($message, 'value', 'test');
 
-        return '<@'.$request->json('member.user.id').'> '.$message.'!';
+        $user = $request->json('member.user.id', $request->json('user.id'));
+
+        return "<@$user> $message!";
     }
 
     protected function hello(Request $request): string
@@ -70,6 +72,8 @@ class InteractionsListener
 
         $message = Arr::get($message, 'value', 'Hello');
 
-        return '<@'.$request->json('member.user.id').'> '.$message.'!';
+        $user = $request->json('member.user.id', $request->json('user.id'));
+
+        return "<@$user> $message!";
     }
 }
