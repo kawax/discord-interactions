@@ -20,8 +20,8 @@ class AppServiceProvider extends ServiceProvider
     {
         //
 
-//        $this->app->singleton(InteractionsResponse::class, DeferredResponse::class);
-//        $this->app->singleton(InteractionsEvent::class, InteractionsWebhook::class);
+        $this->app->singleton(InteractionsResponse::class, DeferredResponse::class);
+        $this->app->singleton(InteractionsEvent::class, InteractionsWebhook::class);
     }
 
     /**
