@@ -33,7 +33,7 @@ class InteractionsListener
             $token = $event->request->json('token');
 
             $data = [
-                'content' => 'Hello! @'.$event->request->json('member.user.id'),
+                'content' => '@'.$event->request->json('member.user.id').' Hello!',
             ];
 
             $response = Http::discord()->post("/webhooks/$app_id/$token", $data);
