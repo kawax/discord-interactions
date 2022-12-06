@@ -6,6 +6,7 @@ use App\Events\InteractionsWebhook;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Http\Request;
 use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
 
 class InteractionsListener
@@ -54,22 +55,18 @@ class InteractionsListener
 
     protected function test(Request $request): string
     {
-        $message = $request->collect('data.options')->firstWhere('name', 'message')['value'];
+        $message = $request->collect('data.options')->firstWhere('name', 'message');
 
-        if (blank($message)) {
-            $message = 'test';
-        }
+        $message = Arr::get($message, 'value', 'test');
 
         return '<@'.$request->json('member.user.id').'> '.$message.'!';
     }
 
     protected function hello(Request $request): string
     {
-        $message = $request->collect('data.options')->firstWhere('name', 'message')['value'];
+        $message = $request->collect('data.options')->firstWhere('name', 'message');
 
-        if (blank($message)) {
-            $message = 'Hello';
-        }
+        $message = Arr::get($message, 'value', 'Hello');
 
         return '<@'.$request->json('member.user.id').'> '.$message.'!';
     }
