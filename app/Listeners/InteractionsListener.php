@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
+use Revolution\DiscordManager\Facades\DiscordManager;
 
 class InteractionsListener
 {
@@ -30,19 +31,7 @@ class InteractionsListener
     public function handle(InteractionsWebhook $event)
     {
         dispatch(function () use ($event) {
-            $app_id = config('services.discord.bot');
-            $token = $event->request->json('token');
-
-            info($event->request);
-
-            $data = [
-                'content' => $this->content($event->request),
-                'allowed_mentions' => ['parse' => ['users']],
-            ];
-
-            $response = Http::discord()->post("/webhooks/$app_id/$token", $data);
-
-            info($response->json());
+            DiscordManager::interaction($event->request);
         })->afterResponse();
     }
 
