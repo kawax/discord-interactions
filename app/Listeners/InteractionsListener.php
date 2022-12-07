@@ -30,9 +30,7 @@ class InteractionsListener
         // Must use queue or dispatch()->afterResponse()
 
         // When not using a queue
-        dispatch(function () use ($event) {
-            DiscordManager::interaction($event->request);
-        })->afterResponse();
+        dispatch(fn () => DiscordManager::interaction($event->request))->afterResponse();
 
         // When using a queue
         //DiscordManager::interaction($event->request);
