@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d14bf3f4c52740cdad6fe3bceccc107",
+    "content-hash": "1f1068ff673a93432ed84e558190ef3d",
     "packages": [
         {
             "name": "brick/math",
@@ -4469,16 +4469,16 @@
         },
         {
             "name": "revolution/discord-manager",
-            "version": "dev-interactions",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/discord-manager.git",
-                "reference": "d246bf112af0a8d298324b08a786273df19f1fca"
+                "reference": "99a326c35f2423fedb26299a275796b390323126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/discord-manager/zipball/d246bf112af0a8d298324b08a786273df19f1fca",
-                "reference": "d246bf112af0a8d298324b08a786273df19f1fca",
+                "url": "https://api.github.com/repos/kawax/discord-manager/zipball/99a326c35f2423fedb26299a275796b390323126",
+                "reference": "99a326c35f2423fedb26299a275796b390323126",
                 "shasum": ""
             },
             "require": {
@@ -4532,9 +4532,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/discord-manager/issues",
-                "source": "https://github.com/kawax/discord-manager/tree/interactions"
+                "source": "https://github.com/kawax/discord-manager/tree/4.1.0"
             },
-            "time": "2022-12-07T09:06:47+00:00"
+            "time": "2022-12-07T09:55:46+00:00"
         },
         {
             "name": "ringcentral/psr7",
@@ -10635,9 +10635,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "revolution/discord-manager": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
