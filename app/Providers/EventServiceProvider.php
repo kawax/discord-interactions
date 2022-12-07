@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Events\InteractionsWebhook;
 use App\Listeners\InteractionsListener;
+use Revolution\DiscordManager\Events\InteractionsWebhook;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;

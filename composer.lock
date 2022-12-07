@@ -4473,12 +4473,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/discord-manager.git",
-                "reference": "e525c5220fd4225eef4c0f736b74a25ab24e5165"
+                "reference": "8b5e17e76781aff2b21b38a38d65f5f0e67c0222"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/discord-manager/zipball/e525c5220fd4225eef4c0f736b74a25ab24e5165",
-                "reference": "e525c5220fd4225eef4c0f736b74a25ab24e5165",
+                "url": "https://api.github.com/repos/kawax/discord-manager/zipball/8b5e17e76781aff2b21b38a38d65f5f0e67c0222",
+                "reference": "8b5e17e76781aff2b21b38a38d65f5f0e67c0222",
                 "shasum": ""
             },
             "require": {
@@ -4533,7 +4533,7 @@
                 "issues": "https://github.com/kawax/discord-manager/issues",
                 "source": "https://github.com/kawax/discord-manager/tree/interactions"
             },
-            "time": "2022-12-07T06:28:53+00:00"
+            "time": "2022-12-07T06:42:45+00:00"
         },
         {
             "name": "ringcentral/psr7",
