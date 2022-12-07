@@ -4473,12 +4473,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/discord-manager.git",
-                "reference": "ec9851322ec551b5672ab7324e4c081a94d7c5fd"
+                "reference": "d246bf112af0a8d298324b08a786273df19f1fca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/discord-manager/zipball/ec9851322ec551b5672ab7324e4c081a94d7c5fd",
-                "reference": "ec9851322ec551b5672ab7324e4c081a94d7c5fd",
+                "url": "https://api.github.com/repos/kawax/discord-manager/zipball/d246bf112af0a8d298324b08a786273df19f1fca",
+                "reference": "d246bf112af0a8d298324b08a786273df19f1fca",
                 "shasum": ""
             },
             "require": {
@@ -4487,7 +4487,7 @@
                 "php": "^8.0",
                 "restcord/restcord": "dev-develop",
                 "simplito/elliptic-php": "^1.0",
-                "team-reflex/discord-php": "^7.0"
+                "team-reflex/discord-php": "^7.0||^10.0"
             },
             "require-dev": {
                 "laravel-notification-channels/discord": "^1.3",
@@ -4534,7 +4534,7 @@
                 "issues": "https://github.com/kawax/discord-manager/issues",
                 "source": "https://github.com/kawax/discord-manager/tree/interactions"
             },
-            "time": "2022-12-07T08:39:09+00:00"
+            "time": "2022-12-07T09:06:47+00:00"
         },
         {
             "name": "ringcentral/psr7",
