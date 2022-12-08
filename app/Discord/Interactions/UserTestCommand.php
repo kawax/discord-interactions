@@ -24,7 +24,7 @@ class UserTestCommand
         $app_id = config('services.discord.bot');
         $token = $request->json('token');
 
-        $user = $request->json('member.user.id');
+        $user = $request->json('member.user.id', $request->json('user.id'));
 
         $target_user = $request->collect('data.resolved.users')->keys()->first();
 
