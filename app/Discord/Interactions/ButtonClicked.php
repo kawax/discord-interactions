@@ -5,7 +5,7 @@ namespace App\Discord\Interactions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
-class MessageButtonCommand
+class ButtonClicked
 {
     /**
      * @var  string

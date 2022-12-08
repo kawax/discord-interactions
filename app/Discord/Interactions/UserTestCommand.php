@@ -4,6 +4,8 @@ namespace App\Discord\Interactions;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Revolution\DiscordManager\Support\ButtonStyle;
+use Revolution\DiscordManager\Support\ComponentType;
 
 class UserTestCommand
 {
@@ -27,6 +29,19 @@ class UserTestCommand
         $data = [
             'content' => "<@$user> user-test!",
             'allowed_mentions' => ['parse' => ['users']],
+            'components' => [
+                [
+                    'type' => ComponentType::ACTION_ROW,
+                    'components' => [
+                        [
+                            "type" => ComponentType::BUTTON,
+                            'label' => 'Click me!',
+                            'style' => ButtonStyle::PRIMARY,
+                            'custom_id' => 'click_one',
+                        ],
+                    ],
+                ],
+            ],
         ];
 
         $response = Http::discord()->post("/webhooks/$app_id/$token", $data);
