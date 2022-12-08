@@ -21,6 +21,18 @@ return [
                 ],
             ],
         ],
+        [
+            'name' => 'user-test',
+            //'description' => 'user test command',
+            'type' => CommandType::USER,
+            'guild_id' => env('DISCORD_GUILD'),
+        ],
+        [
+            'name' => 'message-test',
+            //'description' => 'message test command',
+            'type' => CommandType::MESSAGE,
+            'guild_id' => env('DISCORD_GUILD'),
+        ],
     ],
     'global' => [
         [
