@@ -38,7 +38,6 @@ class MessageTestCommand
                             "custom_id" => "click_one",
                         ],
                     ],
-
                 ],
             ],
         ];
