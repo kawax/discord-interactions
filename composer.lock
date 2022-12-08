@@ -4469,16 +4469,16 @@
         },
         {
             "name": "revolution/discord-manager",
-            "version": "4.1.0",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kawax/discord-manager.git",
-                "reference": "99a326c35f2423fedb26299a275796b390323126"
+                "reference": "c5ca10f3f2b6a6dd3afae32931a5d37af6052433"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kawax/discord-manager/zipball/99a326c35f2423fedb26299a275796b390323126",
-                "reference": "99a326c35f2423fedb26299a275796b390323126",
+                "url": "https://api.github.com/repos/kawax/discord-manager/zipball/c5ca10f3f2b6a6dd3afae32931a5d37af6052433",
+                "reference": "c5ca10f3f2b6a6dd3afae32931a5d37af6052433",
                 "shasum": ""
             },
             "require": {
@@ -4532,9 +4532,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kawax/discord-manager/issues",
-                "source": "https://github.com/kawax/discord-manager/tree/4.1.0"
+                "source": "https://github.com/kawax/discord-manager/tree/4.1.1"
             },
-            "time": "2022-12-07T09:55:46+00:00"
+            "time": "2022-12-08T01:13:12+00:00"
         },
         {
             "name": "ringcentral/psr7",
