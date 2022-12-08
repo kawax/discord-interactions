@@ -26,7 +26,7 @@ class UserTestCommand
 
         $user = $request->json('member.user.id');
 
-        $target_user = array_key_first($request->collect('data.resolved.users'));
+        $target_user = $request->collect('data.resolved.users')->keys()->first();
 
         $data = [
             'content' => "<@$user> user-test! <@$target_user>",
