@@ -29,15 +29,16 @@ class MessageTestCommand
         $data = [
             'content' => "<@$user> message-test!",
             'allowed_mentions' => ['parse' => ['users']],
-            "components" => [
+            'components' => [
                 [
-                    "type" => ComponentType::ACTION_ROW,
-                    "components" => [
+                    'type' => ComponentType::ACTION_ROW,
+                    'components' => [
                         [
                             "type" => ComponentType::BUTTON,
-                            "label" => "Click me!",
-                            "style" => ButtonStyle::PRIMARY,
-                            "custom_id" => "click_one",
+                            'label' => 'Click me!',
+                            'style' => ButtonStyle::LINK,
+                            'url' => 'https://example.com/',
+                            'custom_id' => 'click_one',
                         ],
                     ],
                 ],

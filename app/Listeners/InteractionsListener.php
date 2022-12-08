@@ -27,7 +27,7 @@ class InteractionsListener
      */
     public function handle(InteractionsWebhook $event)
     {
-        info($event->request->collect()->toJson());
+        info($event->request->collect()->toJson(JSON_PRETTY_PRINT));
 
         // Must use queue or dispatch()->afterResponse()
 
