@@ -27,6 +27,8 @@ class InteractionsListener
      */
     public function handle(InteractionsWebhook $event)
     {
+        info($event->request->collect()->toJson());
+
         // Must use queue or dispatch()->afterResponse()
 
         // When not using a queue

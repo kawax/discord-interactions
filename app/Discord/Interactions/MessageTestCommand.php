@@ -4,6 +4,8 @@ namespace App\Discord\Interactions;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Revolution\DiscordManager\Support\ButtonStyle;
+use Revolution\DiscordManager\Support\ComponentType;
 
 class MessageTestCommand
 {
@@ -29,12 +31,12 @@ class MessageTestCommand
             'allowed_mentions' => ['parse' => ['users']],
             "components" => [
                 [
-                    "type" => 1,
+                    "type" => ComponentType::ACTION_ROW,
                     "components" => [
                         [
-                            "type" => 2,
+                            "type" => ComponentType::BUTTON,
                             "label" => "Click me!",
-                            "style" => 1,
+                            "style" => ButtonStyle::PRIMARY,
                             "custom_id" => "click_one",
                         ],
                     ],
