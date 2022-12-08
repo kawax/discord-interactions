@@ -38,7 +38,7 @@ class MessageTestCommand
                             'label' => 'Click me!',
                             'style' => ButtonStyle::LINK,
                             'url' => 'https://example.com/',
-                            'custom_id' => 'click_one',
+                            //'custom_id' => 'click_one',
                         ],
                     ],
                 ],
