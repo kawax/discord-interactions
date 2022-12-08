@@ -24,10 +24,12 @@ class UserTestCommand
         $app_id = config('services.discord.bot');
         $token = $request->json('token');
 
-        $user = $request->json('member.user.id', $request->json('user.id'));
+        $user = $request->json('member.user.id');
+
+        $target_user = array_key_first($request->collect('data.resolved.users'));
 
         $data = [
-            'content' => "<@$user> user-test!",
+            'content' => "<@$user> user-test! <@$target_user>",
             'allowed_mentions' => ['parse' => ['users']],
             'components' => [
                 [
