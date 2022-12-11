@@ -29,12 +29,6 @@ class InteractionsListener
     {
         info($event->request->collect()->toJson(JSON_PRETTY_PRINT));
 
-        // Must use queue or dispatch()->afterResponse()
-
-        // When not using a queue
-        dispatch(fn () => DiscordManager::interaction($event->request))->afterResponse();
-
-        // When using a queue
-        //DiscordManager::interaction($event->request);
+        DiscordManager::interaction($event->request);
     }
 }

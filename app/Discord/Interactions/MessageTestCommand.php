@@ -3,12 +3,14 @@
 namespace App\Discord\Interactions;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
+use Revolution\DiscordManager\Concerns\WithInteraction;
 use Revolution\DiscordManager\Support\ButtonStyle;
 use Revolution\DiscordManager\Support\ComponentType;
 
 class MessageTestCommand
 {
+    use WithInteraction;
+
     /**
      * @var  string
      */
@@ -21,9 +23,6 @@ class MessageTestCommand
      */
     public function __invoke(Request $request): void
     {
-        $app_id = config('services.discord.bot');
-        $token = $request->json('token');
-
         $user = $request->json('member.user.id', $request->json('user.id'));
 
         $data = [
@@ -44,7 +43,7 @@ class MessageTestCommand
             ],
         ];
 
-        $response = Http::discord()->post("/webhooks/$app_id/$token", $data);
+        $response = $this->followup(token: $request->json('token'), data: $data);
 
         info($response->json());
     }
