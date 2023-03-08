@@ -41,4 +41,25 @@ return [
             'type' => CommandType::CHAT_INPUT,
         ],
     ],
+
+    // Commands path
+    'commands' => app_path('Discord/Interactions'),
+
+    //Bot token
+    'token' => env('DISCORD_BOT_TOKEN'),
+
+    //APPLICATION ID
+    'bot' => env('DISCORD_BOT'),
+
+    //PUBLIC KEY
+    'public_key' => env('DISCORD_PUBLIC_KEY'),
+
+    // URI path
+    'path' => 'discord/webhook',
+
+    // Route name
+    'route' => 'discord.webhook',
+
+    // Route middleware
+    'middleware' => 'throttle',
 ];

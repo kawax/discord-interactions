@@ -25,7 +25,7 @@ class InteractionsListener
      * @param  InteractionsWebhook  $event
      * @return void
      */
-    public function handle(InteractionsWebhook $event)
+    public function handle(InteractionsWebhook $event): void
     {
         info($event->request->collect()->toJson(JSON_PRETTY_PRINT));
 

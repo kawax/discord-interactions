@@ -33,38 +33,4 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
-    'discord' => [
-        'path'      => [
-            'commands' => app_path('Discord/Commands'),
-            'directs'  => app_path('Discord/Directs'),
-            'interactions'  => app_path('Discord/Interactions'),
-        ],
-
-        //Bot token
-        'token'     => env('DISCORD_BOT_TOKEN'),
-        //APPLICATION ID
-        'bot'       => env('DISCORD_BOT'),
-        //PUBLIC KEY
-        'public_key' => env('DISCORD_PUBLIC_KEY'),
-
-        //Notification route
-        'channel'   => env('DISCORD_CHANNEL'),
-
-        //Interactions command
-        'interactions' => [
-            'path' => 'discord/webhook',
-            'route' => 'discord.webhook',
-            'middleware' => 'throttle',
-        ],
-
-        //Gateway command
-        'discord-php' => [
-            'disabledEvents' => [
-                Event::TYPING_START,
-            ],
-            'intents' => array_sum(Intents::default()),
-        ],
-    ],
-
 ];
