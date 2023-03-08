@@ -10,7 +10,7 @@
         "laravel/framework": "^10.0",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "revolution/discord-manager": "dev-master"
+        "revolution/discord-manager": "^5.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.4",
