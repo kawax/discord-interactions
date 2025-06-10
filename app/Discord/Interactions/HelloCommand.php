@@ -9,16 +9,8 @@ class HelloCommand
 {
     use WithInteraction;
 
-    /**
-     * @var  string
-     */
     public string $command = 'hello';
 
-    /**
-     * @param  Request  $request
-     *
-     * @return void
-     */
     public function __invoke(Request $request): void
     {
         $user = $request->json('member.user.id', $request->json('user.id'));

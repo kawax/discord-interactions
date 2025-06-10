@@ -9,20 +9,12 @@ class ButtonClicked
 {
     use WithInteraction;
 
-    /**
-     * @var  string
-     */
     public string $command = 'click_one';
 
-    /**
-     * @param  Request  $request
-     *
-     * @return void
-     */
     public function __invoke(Request $request): void
     {
         $data = [
-            'content' => "Click!",
+            'content' => 'Click!',
             'allowed_mentions' => ['parse' => ['users']],
         ];
 

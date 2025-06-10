@@ -11,16 +11,8 @@ class MessageTestCommand
 {
     use WithInteraction;
 
-    /**
-     * @var  string
-     */
     public string $command = 'message-test';
 
-    /**
-     * @param  Request  $request
-     *
-     * @return void
-     */
     public function __invoke(Request $request): void
     {
         $user = $request->json('member.user.id', $request->json('user.id'));
@@ -33,7 +25,7 @@ class MessageTestCommand
                     'type' => ComponentType::ACTION_ROW,
                     'components' => [
                         [
-                            "type" => ComponentType::BUTTON,
+                            'type' => ComponentType::BUTTON,
                             'label' => 'Click me!',
                             'style' => ButtonStyle::LINK,
                             'url' => 'https://example.com/',

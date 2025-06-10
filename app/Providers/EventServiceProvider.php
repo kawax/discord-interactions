@@ -3,11 +3,11 @@
 namespace App\Providers;
 
 use App\Listeners\InteractionsListener;
-use Revolution\DiscordManager\Events\InteractionsWebhook;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
+use Revolution\DiscordManager\Events\InteractionsWebhook;
 
 class EventServiceProvider extends ServiceProvider
 {
