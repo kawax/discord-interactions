@@ -37,6 +37,6 @@ class MessageTestCommand
 
         $response = $this->followup(token: $request->json('token'), data: $data);
 
-        info($response->json());
+        info($response->body());
     }
 }
