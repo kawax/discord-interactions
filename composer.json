@@ -47,9 +47,7 @@
             "@php artisan key:generate --ansi"
         ],
         "ide-helper:meta": "php artisan ide-helper:meta",
-        "ide-helper:generate": "php artisan ide-helper:generate",
-        "sail-up": "vendor/bin/sail up -d",
-        "sail-down": "vendor/bin/sail down"
+        "ide-helper:generate": "php artisan ide-helper:generate"
     },
     "extra": {
         "laravel": {
